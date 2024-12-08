@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="min-h-[100vh] w-full bg-gray-100 bg-cover relative  ">
+    <!-- Header Section -->
+  <header class="fixed w-full top-0 left-0 rounded-xl shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="">
+        <img class="w-[200] h-[60px] " src="logo.png" alt="">
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex space-x-6 uppercase font-serif text-white">
+        <a href="#" class="text-black hover:text-[#ED017F]">Home</a>
+        <a href="#destinations" class="text-black hover:text-[#ED017F]">Destinations</a>
+        <a href="#packages" class="text-black hover:text-[#ED017F]">Packages</a>
+        <a href="#about-us" class="text-black hover:text-[#ED017F]">About Us</a>
+        <a href="#contact" class="text-black hover:text-[#ED017F]">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button (for small screens) -->
+      <div class="md:hidden">
+        <button id="mobile-menu-toggle" class="text-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden  shadow-md hidden ">
+      <div class="px-4 py-2 uppercase font-serif">
+        <a href="#" class="block text-gray-800 py-2 hover:text-indigo-600">Home</a>
+        <a href="#destinations" class="block text-gray-800 py-2 hover:text-indigo-600 ">Destinations</a>
+        <a href="#packages" class="block text-gray-800 py-2 hover:text-indigo-600">Packages</a>
+        <a href="#about-us" class="block text-gray-800 py-2 hover:text-indigo-600">About Us</a>
+        <a href="#contact" class="block text-gray-800 py-2 hover:text-indigo-600">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('travel\ 22.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay for better text visibility -->
+    <div class="relative z-10 max-w-7xl mx-auto   pt-[350px] 2xl:py-[250px] text-center text-white">
+      <h1 class="text-5xl sm:h-[150px] sm:text-6xl md:text-6xl md:h-[80px] xl:text-8xl xl:h-[150px] 2xl:h-[150px] 2xl:text-8xl font-extrabold leading-tight text-orange-400 pb-[-100px]">Explore the World with Us</h1>
+      <p class="text-3xl sm:text-4xl lg:text-7xl lg:h-[230px]  md:h-[150px] md:text-5xl xl:text-5xl xl:h-[140px] 2xl:text-[63px] h-[120px] 2xl:h-[220px]  mb-8"><span class="text-white">Discover amazing destinations,</span> <span class="text-white">personalized travel packages,</span> <span class="text-white">and unforgettable experiences.</span></p>
+      <a href="#packages" class="bg-pink-900  text-white px-3  py-3 rounded-full md:text-3xl   uppercase font-serif text-xl lg:text-4xl xl:text-4xl 2xl:text-5xl hover:bg-black transition-all">Book Now</a>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle functionality
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+    
+    
+
+  <section class="p-8 bg-[#FCE0EF33]  border-[2px] border-gray-300 ">
+    <h2 class="text-3xl font-semibold text-center mb-6">Popular Travel Destinations</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Destination 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="Paris.jpg" alt="Destination 1" class="w-full h-[500px] object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">Paris</h3>
+          <p class="text-gray-600 mt-2">The city of lights, known for its art, fashion, and iconic landmarks like the Eiffel Tower.</p>
+        </div>
+      </div>
+      
+      <!-- Destination 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="Tokyo.jpg" alt="Destination 2" class="w-full h-[500px] object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">Tokyo</h3>
+          <p class="text-gray-600 mt-2">A vibrant mix of modern technology, traditional culture, and delicious cuisine.</p>
+        </div>
+      </div>
+      
+      <!-- Destination 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="Rome.jpg" alt="Destination 3" class="w-full h-[500px] object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">Rome</h3>
+          <p class="text-gray-600 mt-2">A historical city with ancient ruins, Vatican City, and beautiful Italian architecture.</p>
+        </div>
+      </div>
+      
+      <!-- Destination 4 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="Bali.jpg" alt="Destination 4" class="w-full h-[500px] object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">Bali</h3>
+          <p class="text-gray-600 mt-2">Known for its stunning beaches, lush rice terraces, and vibrant culture.</p>
+        </div>
+      </div>
+      
+      <!-- Destination 5 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="New York City.jpg" alt="Destination 5" class="w-full h-[500px] object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">New York City</h3>
+          <p class="text-gray-600 mt-2">The Big Apple, offering everything from Broadway shows to world-class museums and shopping.</p>
+        </div>
+      </div>
+
+      <!-- Destination 5 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="Burj Khalifa.jpg" alt="Destination 5" class="w-full h-[500px] object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800">Burj Khalifa</h3>
+          <p class="text-gray-600 mt-2">The Big Apple, offering everything from Broadway shows to world-class museums and shopping.</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <div class="container mx-auto py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Travel Packages</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <!-- Package Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Paris</h3>
+        <p class="text-xl font-bold text-blue-600 mb-4">$349</p>
+        <ul class="text-gray-600">
+          <li>2 days, all meals included</li>
+          <li>Guided tour of the coastline</li>
+          <li>Relaxation & spa services</li>
+        </ul>
+      </div>
+  
+      <!-- Package Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Tokyo</h3>
+        <p class="text-xl font-bold text-blue-600 mb-4">Starting at $999</p>
+        <ul class="text-gray-600">
+          <li>3 days of hiking and exploring</li>
+          <li>Mountain climbing lessons</li>
+          <li>Camping under the stars</li>
+        </ul>
+      </div>
+  
+      <!-- Package Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Rome</h3>
+        <p class="text-xl font-bold text-blue-600 mb-4">$449</p>
+        <ul class="text-gray-600">
+          <li>4 days of city exploration</li>
+          <li>Includes museum and landmark tours</li>
+          <li>Accommodation included</li>
+        </ul>
+      </div>
+  
+      <!-- Package Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Bali</h3>
+        <p class="text-xl font-bold text-blue-600 mb-4">Starting at $499</p>
+        <ul class="text-gray-600">
+          <li>5 days, luxury safari experience</li>
+          <li>4x4 desert adventure</li>
+          <li>Star-gazing and camel ride</li>
+        </ul>
+      </div>
+
+      <!-- Package Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">New York City</h3>
+        <p class="text-xl font-bold text-blue-600 mb-4">Starting at $549</p>
+        <ul class="text-gray-600">
+          <li>6 days of hiking and exploring</li>
+          <li>Mountain climbing lessons</li>
+          <li>Camping under the stars</li>
+        </ul>
+      </div>
+
+      <!-- Package Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Burj Khalifa</h3>
+        <p class="text-xl font-bold text-blue-600 mb-4">Starting at $599</p>
+        <ul class="text-gray-600">
+          <li>7 days, luxury safari experience</li>
+          <li>4x4 desert adventure</li>
+          <li>Star-gazing and camel ride</li>
+        </ul>
+      </div>
+  
+    </div>
+  </div>
+  
+  <section class="bg-[#FCE0EF33] py-16 px-4 border-[2px]">
+    <div class="container mx-auto text-center">
+      <!-- Heading -->
+      <h2 class="text-4xl font-semibold text-gray-800 mb-8">About Us</h2>
+      
+      <!-- Mission and Vision -->
+      <div class="lg:flex items-center justify-between space-y-8 lg:space-y-0">
+        <div class="lg:w-1/2">
+          <h3 class="text-3xl font-medium text-gray-700 mb-4">Our Mission</h3>
+          <p class="text-lg text-gray-600">Our mission is to provide unforgettable travel experiences by connecting people with destinations that inspire adventure, relaxation, and exploration. We aim to make travel accessible and exciting for everyone, offering personalized services that cater to your needs.</p>
+        </div>
+  
+        <div class="lg:w-1/2">
+          <h3 class="text-3xl font-medium text-gray-700 mb-4">Our Vision</h3>
+          <p class="text-lg text-gray-600">Our vision is to be the leading travel company known for crafting meaningful, enriching, and sustainable travel experiences. We seek to inspire wanderlust, foster cultural exchange, and encourage global exploration.</p>
+        </div>
+      </div>
+  
+      <!-- Images and Text -->
+      <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="relative">
+          <img class="w-full h-full object-cover rounded-lg shadow-lg" src="travel10.jpg" alt="Destination Image 1">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-semibold p-4">Explore the World with Us</div>
+        </div>
+        <div class="relative">
+          <img class="w-full h-full object-cover rounded-lg shadow-lg" src="travel11.jpg" alt="Destination Image 2">
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-semibold p-4">Your Adventure Awaits</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-red-50 py-16 border-[1px] px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+        <p class="text-gray-600 mb-8">
+          Have questions or want to work with us? Fill out the form below, and we'll get back to you shortly.
+        </p>
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Your message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h2>
+        <p class="text-gray-600 mb-6">Reach out to us directly through the details below:</p>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 2a4 4 0 00-8 0v4H5a3 3 0 00-3 3v9a3 3 0 003 3h14a3 3 0 003-3v-9a3 3 0 00-3-3h-3V2z"></path>
+            </svg>
+            <p class="ml-4 text-gray-700">123 Main Street, Springfield, USA</p>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10l1.879 2.186a1.938 1.938 0 002.622.228l2.878-2.235a2 2 0 012.518.09L16.5 14.5m2 2l2.286-2.722m-8.586 2.722l6-7m4.5 1v2a1 1 0 01-1 1h-2.5m2-3h.5m-2.7 8H4.5"></path>
+            </svg>
+            <p class="ml-4 text-gray-700">(555) 123-4567</p>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.252 8c.667-1.333.667-3.333 0-4.667C15.25 2.25 13.3 2.25 12 3.333c-1.3-1.083-3.25-1.083-4.252.333-.667 1.334-.667 3.334 0 4.667C8.25 9.75 10.3 9.75 12 8.667c1.3 1.083 3.25 1.083 4.252-.667z"></path>
+            </svg>
+            <a class="ml-4 text-gray-700" href="#">worldtravel@company.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <footer class="bg-gray-900 text-gray-200 py-10">
+    <div class="container mx-auto px-6 w-full ml-[300px] grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- About Section -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+        <p class="text-sm">
+          We are a leading company committed to delivering high-quality services and customer satisfaction.
+        </p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/about" class="hover:text-gray-400 transition">About</a></li>
+          <li><a href="/services" class="hover:text-gray-400 transition">Services</a></li>
+          <li><a href="/blog" class="hover:text-gray-400 transition">Blog</a></li>
+          <li><a href="/contact" class="hover:text-gray-400 transition">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+        <p class="text-sm mb-4">Stay updated with our latest news and offers.</p>
+        <form>
+          <input type="email" placeholder="Your Email" class="w-full px-4 py-2 mb-2 bg-gray-800 border border-gray-700 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button type="submit" class="w-full bg-blue-500 py-2 text-sm text-gray-200 font-semibold hover:bg-blue-600 transition">Subscribe</button>
+        </form>
+      </div>
+      
+      <!-- Social Media -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+      <p>&copy; 2024 World Travel. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+</div>
+
+</body>
+</html>
+
